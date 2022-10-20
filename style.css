@@ -1,5 +1,132 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@200;400;700&display=swap");
+:root {
+  --primary-backgroud-color: hsl(233, 47%, 7%);
+  --primary-card-color: hsl(244, 38%, 16%);
+  --primary-Soft-violet: hsl(277, 64%, 61%);
+  /* main heading, stats */
+  --White-color: hsl(0, 0%, 100%);
+  /* main paragraph */
+  --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+  /* stat headings */
+  --Slightly-transparent-stat: hsla(0, 0%, 100%, 0.6);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  background: var(--primary-one-color);
+  font-family: "Roboto", sans-serif;
+}
+h2 {
+  font-size: 3.3rem;
+}
+h3 {
+  font-size: 2rem;
+}
+p {
+  font-size: 1.5rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Content */
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .card {
+  width: 85%;
+  background: var(--primary-card-color);
+  border-radius: 1rem;
+}
+.card .card-img {
+  width: 100%;
+  position: relative;
+}
+.card .card-img img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.card .card-img-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primary-Soft-violet);
+  opacity: 80%;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.container .card .card-content {
+  padding: 2.5rem;
+}
+.card-content .card-content-main h2 {
+  text-align: center;
+  font-size: 3rem;
+  color: var(--White-color);
+}
+.card-content-main h2 .special {
+  color: var(--primary-Soft-violet);
+}
+.card-content .card-content-main p {
+  text-align: center;
+  margin: 2rem 0rem;
+  color: var(--Slightly-transparent-white);
+}
+
+.card-content .card-content-stat{
+  
+}
+
+@media screen and (min-width: 786px) {
+  .container .card {
+    display: flex;
+  }
+  .card .card-img {
+    order: 2;
+  }
+  .card .card-img img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+  }
+  .card .card-img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--primary-Soft-violet);
+    opacity: 80%;
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 0rem;
+    border-bottom-right-radius: 1rem;
+  }
+
+  .container .card .card-content {
+    padding: 5rem;
+  }
+  .card-content .card-content-main h2 {
+    text-align: left;
+    font-size: 3.3rem;
+  }
+  .card-content .card-content-main p {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 200;
+  }
 }
