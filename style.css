@@ -42,6 +42,7 @@ p {
 /* Content */
 .container {
   height: 100vh;
+  background: var(--primary-backgroud-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,8 +59,8 @@ p {
 .card .card-img img {
   width: 100%;
   height: 100%;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 .card .card-img-overlay {
   position: absolute;
@@ -67,8 +68,8 @@ p {
   height: 100%;
   background: var(--primary-Soft-violet);
   opacity: 80%;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .container .card .card-content {
@@ -88,23 +89,40 @@ p {
   color: var(--Slightly-transparent-white);
 }
 
-.card-content .card-content-stat{
-  
+.card-content .card-content-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card-content .card-content-stat .card-stat {
+  text-align: center;
+  margin: 1rem 0rem;
+}
+.card-content-stat .card-stat h3 {
+  font-size: 2rem;
+  color: var(--Slightly-transparent-white);
+}
+.card-content-stat .card-stat p {
+  font-size: 1.1rem;
+  color: var(--Slightly-transparent-stat);
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 786px) {
   .container .card {
+    width: 80%;
     display: flex;
   }
   .card .card-img {
     order: 2;
+    flex: 1 1 20rem;
   }
   .card .card-img img {
     width: 100%;
     height: 100%;
     border-top-left-radius: 0rem;
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
   }
   .card .card-img-overlay {
     position: absolute;
@@ -112,13 +130,14 @@ p {
     height: 100%;
     background: var(--primary-Soft-violet);
     opacity: 80%;
-    border-top-right-radius: 1rem;
+    border-top-right-radius: 0.5rem;
     border-top-left-radius: 0rem;
-    border-bottom-right-radius: 1rem;
+    border-bottom-right-radius: 0.5rem;
   }
 
   .container .card .card-content {
     padding: 5rem;
+    flex: 1 1 20rem;
   }
   .card-content .card-content-main h2 {
     text-align: left;
@@ -128,5 +147,12 @@ p {
     text-align: left;
     font-size: 2rem;
     font-weight: 200;
+  }
+
+  .card-content .card-content-stat {
+    margin: 2rem 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
   }
 }
